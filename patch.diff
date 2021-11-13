@@ -1,0 +1,698 @@
+From 95a67ef92f2b9a3adabc2ec1a3fa5c4ee6985fa4 Mon Sep 17 00:00:00 2001
+From: Giznulf <pavelgena2@gmail.com>
+Date: Mon, 8 Nov 2021 17:51:31 +0300
+Subject: [PATCH] =?UTF-8?q?=D0=9F=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC?=
+ =?UTF-8?q?=D0=BC=D0=B0=20=D1=81=D0=BE=D1=80=D1=82=D0=B8=D1=80=D0=BE=D0=B2?=
+ =?UTF-8?q?=D0=BA=D0=B8.=2008.11.2021?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .vs/Sorting/v16/.suo                          | Bin 0 -> 48640 bytes
+ App.config                                    |   6 ++
+ Input.cs                                      |  13 ++++
+ Output.cs                                     |  25 ++++++++
+ Parser.cs                                     |  40 ++++++++++++
+ Program.cs                                    |  14 +++++
+ Properties/AssemblyInfo.cs                    |  36 +++++++++++
+ Sorting.cs                                    |  34 +++++++++++
+ Sorting.csproj                                |  57 ++++++++++++++++++
+ Sorting.sln                                   |  25 ++++++++
+ ...amework,Version=v4.8.AssemblyAttributes.cs |   4 ++
+ ...gnTimeResolveAssemblyReferencesInput.cache | Bin 0 -> 6733 bytes
+ .../Sorting.csproj.AssemblyReference.cache    | Bin 0 -> 1194 bytes
+ .../Sorting.csproj.CoreCompileInputs.cache    |   1 +
+ obj/Debug/Sorting.csproj.FileListAbsolute.txt |   7 +++
+ obj/Debug/Sorting.exe                         | Bin 0 -> 6144 bytes
+ obj/Debug/Sorting.pdb                         | Bin 0 -> 30208 bytes
+ 17 files changed, 262 insertions(+)
+ create mode 100644 .vs/Sorting/v16/.suo
+ create mode 100644 App.config
+ create mode 100644 Input.cs
+ create mode 100644 Output.cs
+ create mode 100644 Parser.cs
+ create mode 100644 Program.cs
+ create mode 100644 Properties/AssemblyInfo.cs
+ create mode 100644 Sorting.cs
+ create mode 100644 Sorting.csproj
+ create mode 100644 Sorting.sln
+ create mode 100644 obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+ create mode 100644 obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+ create mode 100644 obj/Debug/Sorting.csproj.AssemblyReference.cache
+ create mode 100644 obj/Debug/Sorting.csproj.CoreCompileInputs.cache
+ create mode 100644 obj/Debug/Sorting.csproj.FileListAbsolute.txt
+ create mode 100644 obj/Debug/Sorting.exe
+ create mode 100644 obj/Debug/Sorting.pdb
+
+diff --git a/.vs/Sorting/v16/.suo b/.vs/Sorting/v16/.suo
+new file mode 100644
+index 0000000000000000000000000000000000000000..e66c1965bafbb6a97e73cfdbeb40be85045564ca
+GIT binary patch
+literal 48640
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/App.config b/App.config
+new file mode 100644
+index 0000000..193aecc
+--- /dev/null
++++ b/App.config
+@@ -0,0 +1,6 @@
++﻿<?xml version="1.0" encoding="utf-8" ?>
++<configuration>
++    <startup> 
++        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
++    </startup>
++</configuration>
+\ No newline at end of file
+diff --git a/Input.cs b/Input.cs
+new file mode 100644
+index 0000000..9b1ba91
+--- /dev/null
++++ b/Input.cs
+@@ -0,0 +1,13 @@
++﻿using System;
++
++namespace Sorting
++{
++    class Input
++    {       
++        public void Inputs(out string input)
++        {
++            Console.Write("Введите числа через пробел: ");
++            input = Console.ReadLine();            
++        }
++    }
++}
+diff --git a/Output.cs b/Output.cs
+new file mode 100644
+index 0000000..ec57c48
+--- /dev/null
++++ b/Output.cs
+@@ -0,0 +1,25 @@
++﻿using System;
++
++namespace Sorting
++{
++    class Output : Sorting
++    {
++        public void Print()
++        {
++            Sort(out string output, out bool result, out string exit);            
++            if (result)
++            {                
++                Console.WriteLine(output);
++            }
++            else if (exit == "Выход")
++            {
++                Environment.Exit(0);
++            }
++            else
++            {
++                Console.WriteLine("Не все введеные значения являються числам, попробуйте еще раз.");
++            }
++            Console.WriteLine("Введите 'Выход' чтобы завершить.\n");
++        }
++    }
++}
+diff --git a/Parser.cs b/Parser.cs
+new file mode 100644
+index 0000000..80f25d7
+--- /dev/null
++++ b/Parser.cs
+@@ -0,0 +1,40 @@
++﻿using System;
++using System.Text.RegularExpressions;
++
++namespace Sorting
++{
++    class Parser : Input
++    {        
++        public void Parse(out int[] numbers, out bool result, out string exit)
++        {
++            Inputs(out string input);
++            try
++            {
++                string[] parse = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
++                exit = input.Replace(" ", "");
++                string pattern = @"[0-9]";
++                bool res = Regex.IsMatch(exit, pattern);
++                result = res;
++                if (result)
++                {
++                    numbers = Array.ConvertAll(parse, new Converter<string, int>(Converter));
++                }
++                else
++                {
++                    numbers = new int[0];
++                }
++            }
++            catch
++            {
++                numbers = new int[0];
++                result = false;
++                exit = "";
++            }           
++        }
++        public int Converter(string i)
++        {
++            int number = int.Parse(i);
++            return number;
++        }
++    }
++}
+diff --git a/Program.cs b/Program.cs
+new file mode 100644
+index 0000000..10ea7cd
+--- /dev/null
++++ b/Program.cs
+@@ -0,0 +1,14 @@
++﻿namespace Sorting
++{
++    class Program
++    {
++        static void Main(string[] args)
++        {
++            Output output = new Output();
++            while (true)
++            {
++                output.Print();
++            }
++        }
++    }
++}
+diff --git a/Properties/AssemblyInfo.cs b/Properties/AssemblyInfo.cs
+new file mode 100644
+index 0000000..4817141
+--- /dev/null
++++ b/Properties/AssemblyInfo.cs
+@@ -0,0 +1,36 @@
++﻿using System.Reflection;
++using System.Runtime.CompilerServices;
++using System.Runtime.InteropServices;
++
++// Общие сведения об этой сборке предоставляются следующим набором
++// набора атрибутов. Измените значения этих атрибутов для изменения сведений,
++// связанные с этой сборкой.
++[assembly: AssemblyTitle("Sorting")]
++[assembly: AssemblyDescription("")]
++[assembly: AssemblyConfiguration("")]
++[assembly: AssemblyCompany("")]
++[assembly: AssemblyProduct("Sorting")]
++[assembly: AssemblyCopyright("Copyright ©  2021")]
++[assembly: AssemblyTrademark("")]
++[assembly: AssemblyCulture("")]
++
++// Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
++// для компонентов COM. Если необходимо обратиться к типу в этой сборке через
++// из модели COM задайте для атрибута ComVisible этого типа значение true.
++[assembly: ComVisible(false)]
++
++// Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
++[assembly: Guid("be8d8804-3fc2-455c-8e28-5cfda3e3e139")]
++
++// Сведения о версии сборки состоят из указанных ниже четырех значений:
++//
++//      Основной номер версии
++//      Дополнительный номер версии
++//      Номер сборки
++//      Номер редакции
++//
++// Можно задать все значения или принять номера сборки и редакции по умолчанию 
++// используя "*", как показано ниже:
++// [assembly: AssemblyVersion("1.0.*")]
++[assembly: AssemblyVersion("1.0.0.0")]
++[assembly: AssemblyFileVersion("1.0.0.0")]
+diff --git a/Sorting.cs b/Sorting.cs
+new file mode 100644
+index 0000000..8427db5
+--- /dev/null
++++ b/Sorting.cs
+@@ -0,0 +1,34 @@
++﻿namespace Sorting
++{
++    class Sorting : Parser
++    {
++        public void Sort(out string output, out bool result, out string exit)
++        {
++            Parse(out int[] number, out bool res, out string _exit);
++            if (res)
++            {
++                int timeNumber;
++                for (int i = 0; i < number.Length - 1; i++)
++                {
++                    for (int j = i + 1; j < number.Length; j++)
++                    {
++                        if (number[i] > number[j])
++                        {
++                            timeNumber = number[i];
++                            number[i] = number[j];
++                            number[j] = timeNumber;
++                        }
++                    }
++                }
++                output = string.Join(" ", number);
++                result = res;
++            }
++            else
++            {
++                output = "";
++                result = res;
++            }
++            exit = _exit;
++        }
++    }
++}
+diff --git a/Sorting.csproj b/Sorting.csproj
+new file mode 100644
+index 0000000..ad5afa4
+--- /dev/null
++++ b/Sorting.csproj
+@@ -0,0 +1,57 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
++    <ProjectGuid>{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}</ProjectGuid>
++    <OutputType>Exe</OutputType>
++    <RootNamespace>Sorting</RootNamespace>
++    <AssemblyName>Sorting</AssemblyName>
++    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
++    <FileAlignment>512</FileAlignment>
++    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
++    <Deterministic>true</Deterministic>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>bin\Debug\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugType>pdbonly</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>bin\Release\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="System" />
++    <Reference Include="System.Core" />
++    <Reference Include="System.Xml.Linq" />
++    <Reference Include="System.Data.DataSetExtensions" />
++    <Reference Include="Microsoft.CSharp" />
++    <Reference Include="System.Data" />
++    <Reference Include="System.Net.Http" />
++    <Reference Include="System.Xml" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="Input.cs" />
++    <Compile Include="Parser.cs" />
++    <Compile Include="Output.cs" />
++    <Compile Include="Program.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++    <Compile Include="Sorting.cs" />
++  </ItemGroup>
++  <ItemGroup>
++    <None Include="App.config" />
++  </ItemGroup>
++  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
++</Project>
+\ No newline at end of file
+diff --git a/Sorting.sln b/Sorting.sln
+new file mode 100644
+index 0000000..5fb1c2d
+--- /dev/null
++++ b/Sorting.sln
+@@ -0,0 +1,25 @@
++﻿
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio Version 16
++VisualStudioVersion = 16.0.31624.102
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting.csproj", "{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{BE8D8804-3FC2-455C-8E28-5CFDA3E3E139}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++	GlobalSection(ExtensibilityGlobals) = postSolution
++		SolutionGuid = {35FDF216-B899-4A0C-81B4-E5889749DDEC}
++	EndGlobalSection
++EndGlobal
+diff --git a/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs b/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+new file mode 100644
+index 0000000..15efebf
+--- /dev/null
++++ b/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+@@ -0,0 +1,4 @@
++// <autogenerated />
++using System;
++using System.Reflection;
++[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETFramework,Version=v4.8", FrameworkDisplayName = ".NET Framework 4.8")]
+diff --git a/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f7b5ed1d73ed77cf38e39c1c119d76bc0b96bc6
+GIT binary patch
+literal 6733
+zcmeHMUr!rH5Vyf>FoYD-ln`iAr%lx)bx(HrABhKI;|4WB$aZNZY?1Zd+HAPHb$9mw
+z7xC0S_N^bFpP=evD^>jt<P)_sXZy^*&_?n}JopgfWp;Odv$M17-wlyyBog@t9{j}T
+z<^TxmB{!u|qNa^4t~_cNwP$f*WQF4hcRjb3N^UW!xNui83q~4$Qpv1mYfrKjmw8%J
+zJC)q@sx~*jX3dh=W9~{dJzJZvE!Hv_Yd%e9=@3FLy#?u+$88Jo)?Lk{XnZSaqrs$6
+zpmN=9cv{_s$#<!3ivwn@D#e_t-CR4=%tf!%7>v#ex5n#vZnH^~x)!&nW}T6!RWmiu
+zw)2uY>_Eu9PFIOmq3`yYzPzw4SnqvQmZ+>V9ZV~FRmJoM7*P*--4&AMSdBs`)?KB+
+zzpi&J!%war)H2r^dWT<b;@$=Q=~+n|)~WP4H*;JvQwzzN8gE#d$|9rE+})&lSB=-t
+zDMlMo)F48*stL*JTxr?tPKd+8G{X>1gQ3&GIE6BKuIr_6`5u!GE?4KcYS^@ifafQ+
+z6K$q7aZ?JDDJA48c+WMg2~w^-g;@p9)!bq2Dd#P<qNJug#R{y(By+)3UJ3_{z6MLT
+zWJl|Vg$$5ELL!ktkOR?Zl)x{@$iS~d#ir8Cf%Js^H8m!j@fCBK<ficgg7qr1y?w<H
+zI1yXa_Sh!n^3|8Y(4v;yt*4TXGKI8xwR^_q{`V1ET%_~n{6c1Vc8;Z&mMf{N{J5sB
+zh7pHKZ^L@c%|)aA6b&Pbg3}a+@oSz_Jw8DF1PvpH`U%>rFV0F7d2oCX#7I1b%^?&(
+z2O{wsAmC#dMI6Nlict_F<R-`n83Xa`sL*CkPm4gL52$42fb5oyjkQw1AyfNv#!{+7
+zK-*+<?eLh~0z1|0)ABb8*k}3Vmy<tF{y6#j&5tL4z4`ggPh}-MX|l3p4WY_KAvN%a
+zvZ%f;=UCONgH%8^OF)PUObL5GV831VW0=(3W%2jW>2VO#XZ`AseDsebpnn4UlY!$&
+z)K7pu=8t$ETaMy3xecum(4~#p^lWB1{sH_Q8A)I`@s~`ZFb=ruSmX}0V}@nhWXf-`
+zLzcjZV^j&!{N;Cyz-psmm_GR@(=fdb(}CgDf#@fF-k*GQxU}%N97G}6jy!PVQ#%wa
+z^6Xxfai!g1Mz*+1Wy5!W2EcYg0P7G!ALK&-!IbFriUPhWnU8Z1aCCS$IjX6FqR4dj
+zwarJqAMOf$WX!gY0H+e(3K1d+5Vi0iHkdY^Yu(De2Y^Mx!}`v#{oVOE+$AB*3+{f8
+zSTVeE`$VBn6ngqf+-sigf1m9@DZ)`hJBt6nhIjT`wK3@VJr>-n7fS{GIsjG$-&(Q=
+zBky~?`8|Fs+O7-_$3KBvuk$33aAKX5JOoh;;d)OXoAnVsg+?q770xI!Tc7Tpb|s2b
+z_kuQoEDfIo@?Z3pd<J6bD0^wi^_V<@-if2<+|^iQ!|K~Q9GzqG81&OerOWGy&13Qe
+z`g=jCKL<NwM+JI-R1oWp$0P-+cjcH>?zUNW0?9MJERZiigt0}$0K?lM?0ue^)B@6*
+f@aZ{#-0(LXvjLyM-}<-LfBjFRe|rVB=E~^51oqBI
+
+literal 0
+HcmV?d00001
+
+diff --git a/obj/Debug/Sorting.csproj.AssemblyReference.cache b/obj/Debug/Sorting.csproj.AssemblyReference.cache
+new file mode 100644
+index 0000000000000000000000000000000000000000..3d34e21ccc3cff4fa9fe069146d005c7c6bf4ac5
+GIT binary patch
+literal 1194
+zcmcJN!A=4(5Qf{E_!N7TOM_WLfSaxm4nhdafkTbyuCv(KZm}}~yz&k{iSOd`xNC?W
+z%cYk|CYj{>^3OlNU*#F+9mW`c&c<@--PS9cOtk?_ZjQr2SFWG}4|NI29U|DmXh1pF
+zrFZBmlGElM4$i+xv6!s?w|!p>rNz>DqYLq34Cf7neWs_**Y{Nmylzf<BJHKOBgUU1
+z(DM%@uwix;kG-)*JnH&AEJ5)k9uz6jjvQ!mB&bol8pBH42ugp&5n2AK{4Q)!M6ftF
+h<2RUKH6zwz0VHNb7o?!#rO<XX7(&D^WX?lS;0IDYe#QU*
+
+literal 0
+HcmV?d00001
+
+diff --git a/obj/Debug/Sorting.csproj.CoreCompileInputs.cache b/obj/Debug/Sorting.csproj.CoreCompileInputs.cache
+new file mode 100644
+index 0000000..c76e04a
+--- /dev/null
++++ b/obj/Debug/Sorting.csproj.CoreCompileInputs.cache
+@@ -0,0 +1 @@
++51e0909d364554f7f401e43295f81c667bb737ab
+diff --git a/obj/Debug/Sorting.csproj.FileListAbsolute.txt b/obj/Debug/Sorting.csproj.FileListAbsolute.txt
+new file mode 100644
+index 0000000..c3d52b1
+--- /dev/null
++++ b/obj/Debug/Sorting.csproj.FileListAbsolute.txt
+@@ -0,0 +1,7 @@
++C:\Users\Гизнульф\source\repos\Sorting\bin\Debug\Sorting.exe.config
++C:\Users\Гизнульф\source\repos\Sorting\bin\Debug\Sorting.exe
++C:\Users\Гизнульф\source\repos\Sorting\bin\Debug\Sorting.pdb
++C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.csproj.AssemblyReference.cache
++C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
++C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.exe
++C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.pdb
+diff --git a/obj/Debug/Sorting.exe b/obj/Debug/Sorting.exe
+new file mode 100644
+index 0000000000000000000000000000000000000000..abb1f7a03f5aedc3ab581af5f72e1b1db91932ba
+GIT binary patch
+literal 6144
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/obj/Debug/Sorting.pdb b/obj/Debug/Sorting.pdb
+new file mode 100644
+index 0000000000000000000000000000000000000000..02b1ba311b3802fd226de3a4de508e3f66e15777
+GIT binary patch
+literal 30208
+zcmeHPdvH|M89#RuBM*aaNTP&?D~||)B%5r2gohaN5Y$K{NY#muO|pT7WH;<?Bv9*I
+z#6q-=#cF+`;*_drv`(>8tkUuab$r%X+xmyfv<~)RXGCmtbfl!e-?{f}ZYTscSui2@
+zV@|$v&-u=G9^dz!^WAg5rNUnq3WkFX5m!lW$@J;2imGzg>>Rf{c|=BOl>j(|(17M5
+zb@CZdWFY(R*{}j#!)m%Taiq(JA-MvD)ZwE;a_aV^u>xP$Uc2DcbKi4rs}lQ`{LJyh
+z{<5nc`q$t8=-jrzcpmxamK&W7?>YBo3Gwx?#e2{1nAWz(IeOvNAFUtt!w1^aUFIG*
+zwf&m6Ke}i6{O39jyq}R)w`qU!81MMsH*SqQGVkVFlb&ri$!s*hRv=#TcYX2r`}<qd
+z4y?`h|7XjZ)`st$_ta~XDt4#&@BHdl?Ym}PFu<m5564`Ac**|<k$*e)jQQ9*u3>!J
+zt#|BBdA;@Uife!T?fM<#i`&JQcm3I3@PWAkBj3o=qz^y~HLa8fV<H~Ax)S7|`OM6*
+zSXSD92K5Tq@*mXV>-XS~C;tpsy4C*s-HFX$z^=gY<UiJy|A3WOyayI9|IhaS<1Lvp
+z!!KU)xBdS!Bd>V(5-<5bHsPhzgT=ROo_$~WZ+(w#toUH^@A9(W^cH`3(~}R6ydtkP
+z-s86U#b*WLCI5R5e!gN>)ws?B8+Wf*lvDWqoii^EKK$IMmlCpXTfb!EQ={WETANF}
+zS0G;U|Hajl4}Fxr@6Dp}fBtRJw@sZ#wpWf@_tv_tg)fHMhK0l7c#qrW7oQb~m;Afl
+z+0u369~N&(ye*gz^z8k|D^F~H^o7SaRDPg6I)2AH&rgldXl*X>UV)>BjvnIo{U>?V
+zS2Cyiy09-4uI{+EV^7DgJNCZ2x#Q(`?|S$4>Ts|nROhP>`I>{_>Z)KU;t#B<UL0s{
+ziR9G5w(I6pw-^m~_tr3MHuS58F?Lw#4WSqI7-NUc(S|YhxTGaw&N0RwgVBaD_E;GT
+zt_pdZ`ZCGxmNE8e3bYS>ni6Hp82b#?uBk5d)wZmv&bg*+SvjWcTOSOqov|GH=MM(v
+z-&~MWm{S}M`<iMSHxx%AA%AU4#24<v7}-<3(Nn+|X^8f8v$ZF$*^{?NPchC3vTOFi
+zHhke~HS)!QhF~AY+}zDcjm&Ry$~a~VNP*?P0TWI{q)s*R2T?zsCT)Q^$X|x~r;(PU
+zZW~evWzQm!^h6Oo=cCSsvv~!^e(cuTEZSnpp3=0>1=T1dwre!Kd}<pHeDW@vR5g3G
+zSx+rvoexO?HBixRUV7)}q@`w(mUUKIYPF(0{7~*Qq@}i#mUUKIT7she`ShYZ($Z2$
+z%Q`D9twGU#vZua*w6qe^vd&6N3sSU)U;X4>($ca>%Q`D9EmF}sUt9AAX=$mXWu284
+zMc)bVo<B!qIobJx7#rb!1IfQ5gh)z3xvb(jfzou5;AFeYQAk=<pCMe5&pAR!Oa_6L
+zrdl5anvOd1u-1iqVZk<7iXP=FeXV}gPXX%Yq2W5<DZu100d3g7l~=^y<hv%?SAugp
+z>I*@<5;)Ur$1$Kyk9K}Mb3T6pE&yE#@C*xm(lPXF@azytJ<?K<nE3jFPhZ`A!(SG^
+zGG(~q<!4{40hy=}r6M1gvQ7lg^N=5g^-M(b$;fLiEl(?UEZ6kSn!ZcZ|LfRP>CihJ
+z`VOOyFF^Ae+8OJsMdiY_ub`ZO@#)OM4t3fg`0M<P``MwRI?Zu7o>PHG0$*sBj{(M5
+zbe<&1z%H|VA~1O9lYp`F>$zsR2N*nc$^wGbX~QYN3xUyxz6cn7=!=2VfUg85-%1nT
+z0L<~+1e}iY6~G)%y@`WneHa*H)OFyCfHwnUtorT1Y`+C~ES|Rlj|09Ncs%euz!QLf
+z0(>#>Pk~*)!^H@UqYMe70wiO0>7)QSF@p?osm!OLbd2CE*<S{D79e>f<}>T(i3MVs
+z+`Wvpg@}l~M9h+HoS=1L1msU3cA~W^O9l^)r4x0KkK6-D$2@`Z`K}-l9dlgN8SY~Q
+z?vpkQjTNB$)&9TDoU&CPvA1vwl>4rbFMMHGgR%c#k8(xJJ!piO?7XgOLpb7VlKW%+
+z$@WDwV*k`Vsvdc8Z{@znJ%ym*pX!6O^JJ;9&yk+{8~0V5Q*yuKzGB$@T-f2%9(G51
+z0_|=FQYjyXI9TPs%v>PuuL`ggBys&^m3;s1KL2^9kyh1P<v+1o7jl;QS|d42eXCj;
+zy`i$!W*qx`!!yo)_5(Iie?eXipo}_JU{=-vV}F-ppufPeSlh_Adz2|(qGw$s;tK`9
+z&*kK{X04<Dq0aIvPo}F-P^+#|UvZ8n;G7cLM6F)ak7%1R9h)}dnLP7NpGqn=%8Zi%
+z836bsJp#;mh>~CcFQOQuG3V=1xDSc+ibnZW=rg)b%CBNyb53RK;7L27JTY#W*HY6p
+zWpAaZH{_^EnR00K6X-(`XlKmQ&XA=409%8N37xXRcy%{0{RW<juxWh(F#Uyv!1Nc&
+zfq9P8KcL@m6)^hL>7&tar~zhuEinB6%AJ0|T44GCjll3(bovYQ1Db*92do38AFu(K
+ze!wlj^aC~nyMXC8Tmo$D3z_Em?8n%0k)|URAx%I6HvoNuG_gYB?&mD|%(Fci^~M>W
+zi82?`Souu;YVR^+r$yyX-BEkjB#eb?IT@IH(G+0HCNnz5OTlk!kG%`(A%S~kH4^9E
+zhO`5zKfrOR{r_{5QI&-uR3&K_o;hAo8S)1r-S)o|MWj{rR{K{vo6u8d!(^l01*~<H
+zA<Jo3)^c<w?Wz1!bR4u?AM)UMq34>^X_uC(&3D}B(BG82D5E1t#<(>(2Ru?Ig<1p1
+zMaqbJPg|tklQ;E~bUbIs8*<a3i;$PlsXeS$_AuRirXNkaa07#fJ{y>JQE1lFp9W8T
+zE--jXJE1*XfoJ;5OMz(*hW^e+UmSt*Gp9-2<8z9DW&sS{oDwZJo_+F}{xJD;f{wa(
+zkPQIL??HNt4>k;$6|mZWyE$v<Toj-eNwgJd{}o<;0D0yAt(JMimRPTB9z3Dm1{n9?
+zh7Dg9qYaZo^sKtjF;|^cjVL$9q|rVkoQuCTMiwVx_d7AmX_K&H=)G}v(Uv(t+HeXm
+z=4jeh7M_&-xJ-K)6SbA)auK@i=4(kkxc@MwJ7ak6;TlY%02?RwVNUZU6MtgjG86Mn
+zn)Pp+n0clrOq^}vJ52nIiTUnNx|2Z<n#+$*?K*z3EY+ycy+9BCz0jSAjcU)c;Ix3=
+zJ6E1<{Q*~h8pp9M&Q1Du^nnD=#d%1Jkd`6UAkoHKk#0w_;q<LQikKqzYU=wr!noi~
+z7t<_d?pbbvm-~J<t)?ym(9TM)36nmL{zx~yLl`fQR$7Om^>p**`;Wu&Ql#jOa+7yK
+zPu>ZpW2$I5mjuNdFC*4*BnsmYv(hFi+CsiRjFNNbxrdjtB^A?GmIWfA4J#{y()T@m
+zk{EoPFHoD|;2XL<VsiytI8bOW#{=aXz!t<X(DCABh>4t2KdXT<UOzlfqg*c(<L<sl
+zjE;<fluIFRz7NbmI?v*C(BH;g4B)eU65)^W>p<)8162+2XmOwUSOa{l{;1Fsd9^GG
+zW|fu{&n&~)LFk=ts{F1-y7uGfrQ$13oscMVFZ2|-^RU4Kdgq%a{e9A<_QKZ)3=-wD
+zO7aT|J$$1-8Q*mAf}}EhniH*q8U7=R%k#=TWkom{4d{K$PO;r&_}5;>Y_5qYF7~)f
+z@(SqEOX!_<N_2mqzh+Sd*>+y3H?XP^(O{*)x|SwiAQH~X&-Zu=Jhk=N-olwh*#&uC
+zPj->J&YfLU-{8%2=QZSci)LOXW|uE4EzU2^2bb*M<Q!J(kt(_N{KGny^RAhoXjPtf
+zZM>r)99y>wWmU4K=h#WdcS!aAh&!h!u#Vqc?>9@V`=bLZkSsgVphw2aJ&kAXj|5dl
+zoW!rP7?A_sNFux|e#<caImBnE;dkkkNDoSWMr_1Rl*br#q*T4`OvYfvIL2NgqhjPF
+zH;O*Qn;9EH9~yRt0LC~{)0EjI{)-he&QglnlsAeEg`u)^bq$xwW8`JknfP;Gj<NT1
+zNJiJ)f3Jj2=U(j(tYr|J$X!-Z;;mcl6S)Dz>V-vaI8>Lr+UKqJg=!mvb!&}+27jY3
+zoLkq&cu>i+Pb}m&AQ>9kcOKm_n|<ejz&#bd*>@&kBTkl@(|0EQ2z%^%r<lHqfIK#C
+z5w~q}7pJD(n#K2j1I_{Z3JEvpyk+NW7r*kz8|l%&+(W-aBi^{o1?En#1LH<r{1S<r
+zc+<|dyq#n}gb%OvuqzvST>-AN3+VuCo!-#{5QpI<;Q=rahackury{?)m(+#>)P;H+
+zaAH65so-}x@;ix<+{p8cor08!L@7^1nuIhNiBhJ7`SQ&>SxTPHH}7pJSxS|Xrj}3x
+zD1G__ypQA=j_)J#K8e05=frO^<B;%OklzIP{ZF`%jOZU^Y>+E(sl5(EdIjS3`yc!F
+zpMz74;w69k_n$*s{`T)bhqnCf-+vBH`KwX$4vV0$@nru!+gHH;{g?3@FTUS$Er#0f
+zzj)hc$N&7lm0R!pt+nPhDeo$*<#EgFy>r4<O25F>uh#Kv%)1<ZPvYH=9sd)*b&Zu1
+z?ce_XYhAUW_x;y8`&jaJ{7)>aH85#iI8aV>)+yhB_waW7&%l&lJVs^5e;D7U)LPQV
+zJKgag?2F&o)*(HEbP#C*I_9^w7~>2EWkf`ba~$L`E(1IMqxREpj#B5}yJ3CV<J&Sz
+z9(aCBx@fET#*Y7pJ(R_c|FGjfU`m4q7%S0<bSC0I7;7*KiP5r*|6rJJ0n$vQW8*(^
+zP{!YqF=mARDWim@A!Q*k+GhsRsl<Qqx3|1s@E|eP)Q<naB3Qs0>tiXlv-S$uD=-9B
+F;D43DO2q&G
+
+literal 0
+HcmV?d00001
+
+-- 
+2.33.1.windows.1
+
