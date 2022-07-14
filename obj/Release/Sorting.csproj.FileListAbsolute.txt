@@ -1,8 +1,0 @@
-C:\Users\Гизнульф\source\repos\Sorting\bin\Release\Sorting.exe.config
-C:\Users\Гизнульф\source\repos\Sorting\bin\Release\Sorting.exe
-C:\Users\Гизнульф\source\repos\Sorting\bin\Release\Sorting.pdb
-C:\Users\Гизнульф\source\repos\Sorting\obj\Release\Sorting.csproj.AssemblyReference.cache
-C:\Users\Гизнульф\source\repos\Sorting\obj\Release\Sorting.csproj.SuggestedBindingRedirects.cache
-C:\Users\Гизнульф\source\repos\Sorting\obj\Release\Sorting.csproj.CoreCompileInputs.cache
-C:\Users\Гизнульф\source\repos\Sorting\obj\Release\Sorting.exe
-C:\Users\Гизнульф\source\repos\Sorting\obj\Release\Sorting.pdb
