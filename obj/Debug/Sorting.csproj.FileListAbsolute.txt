@@ -5,3 +5,4 @@ C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.csproj.Assembly
 C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
 C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.exe
 C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.pdb
+C:\Users\Гизнульф\source\repos\Sorting\obj\Debug\Sorting.csproj.SuggestedBindingRedirects.cache
