@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Sorting
@@ -7,91 +8,45 @@ namespace Sorting
     {
         static void Main(string[] args)
         {
-            Program program = new Program();
+            Program sorting = new Program();
             while (true)
             {
-                program.Output();
+                sorting.Output();
             }
         }
         public string Input()
         {
             Console.Write("Введите числа через пробел: ");
-            string input = Console.ReadLine();
-            return input;
+            return Console.ReadLine();
         }
-        public void Parse(out int[] numbers, out bool hasNumber, out string filterString)
+        public void ValidationAndConversion(string inputString, out double[] numbers)  //Валидация и конвертация
         {
-            string inputStrig = Input();
+            if (Regex.IsMatch(inputString, @"(-?[0-9]+(\.{1}[0-9]+)?){1,}"))  //Проверка на числа
+            {
+                string[] parseString = inputString.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                numbers = parseString.Select(x => double.Parse(x)).ToArray();
+            }
+            else numbers = new double[0];
+        }
+
+        public void Output()
+        {
+            SortingImplementation sorting = new SortingImplementation();
             try
             {
-                string[] parseString = inputStrig.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                filterString = inputStrig.Replace(" ", "");
-                string pattern = @"[0-9]";
-                hasNumber = Regex.IsMatch(filterString, pattern);
-                if (hasNumber)
-                {
-                    numbers = Array.ConvertAll(parseString, new Converter<string, int>(Converter));
-                }
-                else
-                {
-                    numbers = new int[0];
-                }
+                string inputStrig = Input();                           //Получение вводимой строки
+                ValidationAndConversion(inputStrig, out double[] unsortedNumbers);   //Проверка на корректность и получение ассива чисел
+
+                Console.WriteLine($"Сортировка кортежем {string.Join(" ", sorting.Tuple(unsortedNumbers))}");
+
+                Console.WriteLine($"Сортировка пузырьком {string.Join(" ", sorting.Bubble(unsortedNumbers))}");
+
+                Console.WriteLine($"Сортировка LINQ {string.Join(" ", sorting.Sorting(unsortedNumbers))}");
             }
             catch
             {
-                numbers = new int[0];
-                hasNumber = false;
-                filterString = "";
+                Console.WriteLine("Не все введеные значения являються числам, попробуйте еще раз."); //Исключение в случае ошибки
             }
-
-            int Converter(string i)
-            {
-                int number = int.Parse(i);
-                return number;
-            }
-        }
-        public void Sort(out string stringNumbers, out bool hasNumber, out string exitProgram)
-        {
-            Parse(out int[] numbers, out hasNumber, out exitProgram);
-            if (hasNumber)
-            {                
-                for (int i = 0; i < numbers.Length - 1; i++)
-                {
-                    for (int j = i + 1; j < numbers.Length; j++)
-                    {
-                        if (numbers[i] > numbers[j])
-                        {
-                            int x;
-
-                            x = numbers[i];
-                            numbers[i] = numbers[j];
-                            numbers[j] = x;
-                        }
-                    }
-                }
-                stringNumbers = string.Join(" ", numbers);
-            }
-            else
-            {
-                stringNumbers = "";
-            }
-        }
-        public void Output()
-        {
-            Sort(out string outputMessage, out bool hasNumber, out string exitProgram);
-            if (hasNumber)
-            {
-                Console.WriteLine(outputMessage);
-            }
-            else if (exitProgram == "Выход")
-            {
-                Environment.Exit(0);
-            }
-            else
-            {
-                Console.WriteLine("Не все введеные значения являються числам, попробуйте еще раз.");
-            }
-            Console.WriteLine("Введите 'Выход' чтобы завершить.\n");
         }
     }
 }
